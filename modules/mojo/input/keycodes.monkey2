@@ -3,7 +3,7 @@ Namespace mojo.input
 
 #rem monkeydoc Key codes.
 
-By default, key codes refer to 'virtual' keys. For example, `Key.W` refers to the key with 'W' printed on it. However, this key may be not
+By default, key codes refer to 'virtual' keys. For example, `Key.W` refers to the key with 'W' printed on it. However, this key may not
 be in the same physical location on all users' keyboards, due to OS language and keyboard settings.
 
 To deal with this, mojo also provides support for 'raw' keys. A raw key code is simply a virtual key code 'or'ed with the special key code
@@ -23,7 +23,7 @@ A raw key represents the physical location of a key on US keyboards. For example
 | G
 | H
 | I
-| J 
+| J
 | K
 | L
 | M
@@ -132,7 +132,7 @@ A raw key represents the physical location of a key on US keyboards. For example
 Enum Key
 
 	'https://wiki.libsdl.org/SDLKeycodeLookup
-	
+
 	None=0
 
 	Backspace=8,Tab
@@ -148,29 +148,29 @@ Enum Key
 	Backquote=96
 	A=97,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z
 	KeyDelete=127
-	
+
 	CapsLock=185,F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12
 	PrintScreen,ScrollLock,Pause,Insert,Home,PageUp,nop,KeyEnd,PageDown
 	Right,Left,Down,Up
 	KeypadNumLock,KeypadDivide,KeypadMultiply,KeypadMinus,KeypadPlus,KeypadEnter
 	Keypad1,Keypad2,Keypad3,Keypad4,Keypad5,Keypad6,Keypad7,Keypad8,Keypad9,Keypad0
 	KeypadPeriod
-	
+
 	LeftControl=$e0+$80,LeftShift,LeftAlt,LeftGui,RightControl,RightShift,RightAlt,RightGui
-	
+
 	Mode=$101+$80,AudioNext,AudioPrev,AudioStop,AudioPlay,AudioMute,MediaSelect,WWW,Mail,Calculator,Computer
 	ACSearch,ACHome,ACBack,ACForward,ACStop,ACRefresh,ACBookmarks
 	BrightnessDown,BrightnessUp,DisplaySwitch,IllumToggle,IllumDown,IllumUp,Eject,Sleep
-	
+
 	Max
-	
+
 	Raw=$10000
-	
+
 End
 
 #rem monkeydoc Modifier masks.
 
-| Modifier 		| Description 
+| Modifier 		| Description
 |:--------------|:-----------
 | LeftShift		| Left shift key.
 | RightShift	| Right shift key.
@@ -205,12 +205,12 @@ Enum Modifier
 	NumLock=		$1000
 	CapsLock=		$2000
 	Ignore=			$4000
-	
+
 	Shift=			LeftShift|RightShift
 	Control=		LeftControl|RightControl
 	Alt=			LeftAlt|RightAlt
 	Gui=			LeftGui|RightGui
-	
+
 #if __HOSTOS__="macos"
 	LeftMenu=		LeftGui
 	RightMenu=		RightGui
